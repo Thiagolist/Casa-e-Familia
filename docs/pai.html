@@ -12,7 +12,28 @@
     </header>
 
     <main class="container centered">
-      <p>Mensagem para o pai.</p>
+      <p>Pai,</p>
+      <p>Saiba que sinto sempre bastante saudade do Senhor e que todos os dias lembro dos seus exemplos e da sua companhia.</p>
+      <p>Fiz esse pequeno site porque Gostaria de dizer que Cristo é ainda muito excelente general, e que em seu amor tem nos guiado e cuidado na frente de batalha. Desejo que o Senhor esteja sempre forte e saudável para poder falar com autoridade da palavra que cura, salva e liberta. Palavra dada por Cristo ao Coração de fé.</p>
+      <p>O Espírito de Deus faça morada em seu coração e obrigado por sempre me mandar mensagens da palavra de Deus.</p>
+      <p>Obrigado por todas as orações, continue orando por mim acredito que em breve conseguirei me formar.</p>
+      <p>Assinado com o Sangue de Cristo está o Canudo da Salvação e sob seu exemplo continuo treinando fisicamente na academia, nas rua, na piscina, nas praças.</p>
+      <p>Te amo pai.</p>
+      <p><small>Escrito em <time id="writtenAtPai"></time></small></p>
+      <script>
+        (function() {
+          var el = document.getElementById('writtenAtPai');
+          var now = new Date();
+          if (el) {
+            el.dateTime = now.toISOString();
+            try {
+              el.textContent = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long', timeStyle: 'short' }).format(now);
+            } catch (e) {
+              el.textContent = now.toLocaleString('pt-BR');
+            }
+          }
+        })();
+      </script>
       <p><a class="item" href="index.html">← Voltar</a></p>
     </main>
   </body>
