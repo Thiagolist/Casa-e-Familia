@@ -1,258 +1,89 @@
-:root {
-  --bg: #ffffff;
-  --panel: #f8fafc;
-  --card: #ffffff;
-  --text: #1a202c;
-  --muted: #718096;
-  --border: #e2e8f0;
-  --accent: #3182ce;
-  --accent-2: #805ad5;
-  --radius: 14px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-* { box-sizing: border-box; }
-
-html, body { 
-  margin: 0; 
-  padding: 0; 
-  background: var(--bg); 
-  color: var(--text); 
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; 
+body {
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  background: #ffffff;
+  color: #000000;
+  padding: 20px;
 }
 
-.container { 
-  max-width: 1120px; 
-  margin: 0 auto; 
-  padding: 0 24px 0 4px; 
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 2px solid #ff6b6b;
+  border-radius: 20px;
+  padding: 30px;
+  min-height: 500px;
 }
 
-.topbar { 
-  position: sticky; 
-  top: 0; 
-  z-index: 10; 
-  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85)); 
-  backdrop-filter: saturate(140%) blur(8px); 
-  border-bottom: 1px solid var(--border);
+header h1 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ff6b6b;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
 }
 
-.topbar-inner { 
-  max-width: none; 
-  margin: 0; 
-  padding-left: 4px; 
-  padding-right: 8px; 
+.menu h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ff6b6b;
+  margin-bottom: 15px;
 }
 
-.brand { 
-  margin: 18px 0 8px; 
-  font-weight: 700; 
-  letter-spacing: -0.02em; 
-  font-size: 34px; 
+.menu ul {
+  list-style: none;
 }
 
-.page { 
-  display: grid; 
-  grid-template-columns: 220px 1fr; 
-  gap: 28px; 
-  padding: 28px 0 48px; 
+.menu li {
+  margin-bottom: 8px;
+  padding-left: 20px;
 }
 
-.sidebar { 
-  position: sticky; 
-  top: 72px; 
-  height: fit-content; 
-}
-
-.sidenav { 
-  display: grid; 
-  gap: 8px; 
-}
-
-.nav-item { 
-  text-align: left; 
-  padding: 10px 12px; 
-  border-radius: 12px; 
-  background: transparent; 
-  color: var(--text); 
-  border: 1px solid transparent; 
+.menu a {
+  color: #ff6b6b;
   text-decoration: none;
-  font-size: 14px; 
-  transition: all 0.2s ease;
+  font-size: 14px;
+  font-weight: 400;
 }
 
-.nav-item:hover { 
-  background: var(--panel); 
-  border-color: var(--border); 
+.menu a:hover {
+  text-decoration: underline;
 }
 
-.nav-item.active { 
-  background: var(--card); 
-  border-color: var(--border); 
+/* Páginas internas */
+.page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  line-height: 1.6;
 }
 
-.content { 
-  min-height: 60vh; 
+.page h1 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #000000;
 }
 
-.grid { 
-  display: grid; 
-  grid-template-columns: repeat(12, 1fr); 
-  gap: 22px; 
+.page p {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #333333;
 }
 
-.card { 
-  grid-column: span 4; 
-  border-radius: var(--radius); 
-  overflow: hidden; 
-  transition: transform .22s ease, box-shadow .22s ease; 
-}
-
-.card:hover { 
-  transform: translateY(-2px); 
-}
-
-.card-link {
-  display: block;
-  background: var(--card); 
-  border: 1px solid var(--border); 
-  border-radius: var(--radius); 
-  overflow: hidden; 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  color: #ff6b6b;
   text-decoration: none;
-  color: inherit;
-  transition: border-color .22s ease, box-shadow .22s ease;
+  font-size: 14px;
 }
 
-.card-link:hover {
-  border-color: #cbd5e0;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-}
-
-@media (max-width: 1024px) { 
-  .card { grid-column: span 6; } 
-  .page { grid-template-columns: 1fr; } 
-  .sidebar { position: static; } 
-}
-
-@media (max-width: 640px) { 
-  .card { grid-column: span 12; } 
-  .brand { font-size: 28px; } 
-}
-
-.media { 
-  aspect-ratio: 16 / 9; 
-  width: 100%; 
-  background: #f7fafc; 
-}
-
-.bg-1 { 
-  background: radial-gradient(1200px 400px at -10% 110%, #60a5fa 0%, transparent 50%), 
-              radial-gradient(1000px 380px at 110% -10%, #34d399 0%, transparent 55%), 
-              radial-gradient(1200px 500px at 50% 40%, #e2e8f0 0%, #f7fafc 60%); 
-}
-
-.bg-2 { 
-  background: radial-gradient(1200px 400px at 110% 110%, #a78bfa 0%, transparent 55%), 
-              radial-gradient(1000px 380px at -10% -10%, #7dd3fc 0%, transparent 55%), 
-              radial-gradient(1200px 500px at 50% 40%, #e2e8f0 0%, #f7fafc 60%); 
-}
-
-.bg-3 { 
-  background: radial-gradient(1200px 400px at -10% -10%, #f472b6 0%, transparent 55%), 
-              radial-gradient(1000px 380px at 110% 110%, #22d3ee 0%, transparent 55%), 
-              radial-gradient(1200px 500px at 50% 40%, #e2e8f0 0%, #f7fafc 60%); 
-}
-
-.bg-4 { 
-  background: radial-gradient(1200px 400px at 20% 120%, #22c55e 0%, transparent 55%), 
-              radial-gradient(1000px 380px at 120% -10%, #60a5fa 0%, transparent 55%), 
-              radial-gradient(1200px 500px at 50% 40%, #e2e8f0 0%, #f7fafc 60%); 
-}
-
-.card-body { 
-  padding: 16px 18px 20px; 
-}
-
-.eyebrow { 
-  color: var(--muted); 
-  font-size: 12px; 
-  text-transform: uppercase; 
-  letter-spacing: 0.08em; 
-}
-
-.title { 
-  margin: 6px 0 8px; 
-  font-size: 20px; 
-  font-weight: 700; 
-  letter-spacing: -0.01em; 
-}
-
-.excerpt { 
-  margin: 0; 
-  color: var(--muted); 
-  font-size: 14px; 
-}
-
-/* Hero layout for letter pages */
-.hero { 
-  padding: 48px 0 12px; 
-  text-align: center; 
-}
-
-.hero .kicker { 
-  color: var(--muted); 
-  font-size: 12px; 
-  text-transform: uppercase; 
-  letter-spacing: 0.08em; 
-}
-
-.hero h1 { 
-  margin: 10px 0 16px; 
-  font-size: 42px; 
-  line-height: 1.1; 
-  letter-spacing: -0.02em; 
-}
-
-.hero .cta { 
-  display: inline-block; 
-  margin-top: 6px; 
-  padding: 10px 14px; 
-  border-radius: 999px; 
-  background: var(--text); 
-  color: #ffffff; 
-  border: 0; 
-  text-decoration: none; 
-  font-weight: 600; 
-}
-
-.hero-media { 
-  margin: 18px auto 32px; 
-  max-width: 960px; 
-  aspect-ratio: 16 / 9; 
-  border-radius: 16px; 
-  border: 1px solid var(--border); 
-  overflow: hidden; 
-}
-
-.article { 
-  max-width: 800px; 
-  margin: 0 auto; 
-  padding: 0 24px 64px; 
-  color: var(--text); 
-}
-
-.article p { 
-  color: var(--muted); 
-}
-
-/* CSS-only filtering (optional - can be removed if not needed) */
-body:not(.filter-active) .card,
-body.filter-pai .card.pai,
-body.filter-mae .card.mae,
-body.filter-esposa .card.esposa,
-body.filter-irma .card.irma {
-  display: block;
-}
-
-body.filter-active .card {
-  display: none;
+.back-link:hover {
+  text-decoration: underline;
 }
