@@ -1,12 +1,12 @@
 :root {
-  --bg: #0b0f14;
-  --panel: #0f1520;
-  --card: #121826;
-  --text: #e5e7eb;
-  --muted: #9aa4b2;
-  --border: #1f2937;
-  --accent: #7dd3fc;
-  --accent-2: #a78bfa;
+  --bg: #ffffff;
+  --panel: #f8fafc;
+  --card: #ffffff;
+  --text: #1a202c;
+  --muted: #718096;
+  --border: #e2e8f0;
+  --accent: #3182ce;
+  --accent-2: #805ad5;
   --radius: 14px;
 }
 
@@ -30,14 +30,15 @@ html, body {
   position: sticky; 
   top: 0; 
   z-index: 10; 
-  background: linear-gradient(180deg, rgba(11,15,20,0.9), rgba(11,15,20,0.75)); 
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85)); 
   backdrop-filter: saturate(140%) blur(8px); 
+  border-bottom: 1px solid var(--border);
 }
 
 .topbar-inner { 
   max-width: none; 
   margin: 0; 
-  padding-left: 2px; 
+  padding-left: 4px; 
   padding-right: 8px; 
 }
 
@@ -107,7 +108,6 @@ html, body {
 
 .card:hover { 
   transform: translateY(-2px); 
-  box-shadow: 0 28px 60px rgba(0,0,0,0.35); 
 }
 
 .card-link {
@@ -116,14 +116,15 @@ html, body {
   border: 1px solid var(--border); 
   border-radius: var(--radius); 
   overflow: hidden; 
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25); 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
   text-decoration: none;
   color: inherit;
-  transition: border-color .22s ease;
+  transition: border-color .22s ease, box-shadow .22s ease;
 }
 
 .card-link:hover {
-  border-color: #334155;
+  border-color: #cbd5e0;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
 @media (max-width: 1024px) { 
@@ -140,31 +141,31 @@ html, body {
 .media { 
   aspect-ratio: 16 / 9; 
   width: 100%; 
-  background: #111827; 
+  background: #f7fafc; 
 }
 
 .bg-1 { 
   background: radial-gradient(1200px 400px at -10% 110%, #60a5fa 0%, transparent 50%), 
               radial-gradient(1000px 380px at 110% -10%, #34d399 0%, transparent 55%), 
-              radial-gradient(1200px 500px at 50% 40%, #1f2937 0%, #0f1520 60%); 
+              radial-gradient(1200px 500px at 50% 40%, #e2e8f0 0%, #f7fafc 60%); 
 }
 
 .bg-2 { 
   background: radial-gradient(1200px 400px at 110% 110%, #a78bfa 0%, transparent 55%), 
               radial-gradient(1000px 380px at -10% -10%, #7dd3fc 0%, transparent 55%), 
-              radial-gradient(1200px 500px at 50% 40%, #1f2937 0%, #0f1520 60%); 
+              radial-gradient(1200px 500px at 50% 40%, #e2e8f0 0%, #f7fafc 60%); 
 }
 
 .bg-3 { 
   background: radial-gradient(1200px 400px at -10% -10%, #f472b6 0%, transparent 55%), 
               radial-gradient(1000px 380px at 110% 110%, #22d3ee 0%, transparent 55%), 
-              radial-gradient(1200px 500px at 50% 40%, #1f2937 0%, #0f1520 60%); 
+              radial-gradient(1200px 500px at 50% 40%, #e2e8f0 0%, #f7fafc 60%); 
 }
 
 .bg-4 { 
   background: radial-gradient(1200px 400px at 20% 120%, #22c55e 0%, transparent 55%), 
               radial-gradient(1000px 380px at 120% -10%, #60a5fa 0%, transparent 55%), 
-              radial-gradient(1200px 500px at 50% 40%, #1f2937 0%, #0f1520 60%); 
+              radial-gradient(1200px 500px at 50% 40%, #e2e8f0 0%, #f7fafc 60%); 
 }
 
 .card-body { 
@@ -216,8 +217,8 @@ html, body {
   margin-top: 6px; 
   padding: 10px 14px; 
   border-radius: 999px; 
-  background: #fff; 
-  color: #0b0f14; 
+  background: var(--text); 
+  color: #ffffff; 
   border: 0; 
   text-decoration: none; 
   font-weight: 600; 
@@ -240,7 +241,7 @@ html, body {
 }
 
 .article p { 
-  color: #c7ced8; 
+  color: var(--muted); 
 }
 
 /* CSS-only filtering (optional - can be removed if not needed) */
