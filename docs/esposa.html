@@ -12,7 +12,24 @@
     </header>
 
     <main class="container centered">
-      <p>Mensagem para a esposa.</p>
+      <p>Preciosa,</p>
+      <p>Estive caminhando com Cristo e dos Seus ensinos pude entender o maravilhoso destino que é o reino do Senhor Jesus Cristo. Voltaremos todos à origem de todas as coisas. Voltaremos para Ele, para que onde Ele está estejamos nós também.</p>
+      <p>O caminho que Cristo nos ensinou para retornar a Ele é o caminho do amor, sem o qual ninguém conhecerá o Criador.</p>
+      <p><small>Escrito em <time id="writtenAt"></time></small></p>
+      <script>
+        (function() {
+          var el = document.getElementById('writtenAt');
+          var now = new Date();
+          if (el) {
+            el.dateTime = now.toISOString();
+            try {
+              el.textContent = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long', timeStyle: 'short' }).format(now);
+            } catch (e) {
+              el.textContent = now.toLocaleString('pt-BR');
+            }
+          }
+        })();
+      </script>
       <p><a class="item" href="index.html">← Voltar</a></p>
     </main>
   </body>

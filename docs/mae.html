@@ -12,7 +12,26 @@
     </header>
 
     <main class="container centered">
-      <p>Mensagem para a mãe.</p>
+      <p>Mãe</p>
+      <p>No percorrer dos caminhos de Cristo estive por perceber o quanto ele é Bom em ter me dado uma mãe como a senhora. Uma mulher que de fato se interessa pelo bem estar de todos. Gostaria de escrever-lhe sobre Jesus e das coisas que Ele tem me ensinado pessoalmente em meio a tantos trabalhos. Farei todo o esforço possível para falar a linguagem mais clara a respeito dessas coisas porque sei que a Senhora não se agrada muito de coisas prolixas, ou seja, cheia de palavras redundantes.</p>
+      <p>O Senhor me mostrou em alguns momentos o quanto é amável o seu Reino e em oração tive a oportunidade de ter a certeza que Deus tem reservado um lugar que pode ser acessado por todos através da oração, do amor e da gratidão através de Jesus Cristo.</p>
+      <p>A fé que temos no Amor de Deus que vence o mundo será inabalável se constantemente pudermos lembrar de tudo quanto o Senhor já nos providenciou em momentos difíceis. Lembre também do quanto eu como seu filho te amo.</p>
+      <p>Estarei te escrevendo mais.</p>
+      <p><small>Escrito em <time id="writtenAtMae"></time></small></p>
+      <script>
+        (function() {
+          var el = document.getElementById('writtenAtMae');
+          var now = new Date();
+          if (el) {
+            el.dateTime = now.toISOString();
+            try {
+              el.textContent = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long', timeStyle: 'short' }).format(now);
+            } catch (e) {
+              el.textContent = now.toLocaleString('pt-BR');
+            }
+          }
+        })();
+      </script>
       <p><a class="item" href="index.html">← Voltar</a></p>
     </main>
   </body>
