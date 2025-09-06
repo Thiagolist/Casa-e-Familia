@@ -15,7 +15,7 @@ body {
 
 .container {
   padding: 4px;
-  padding-left: 20px;  /* Aumentado o padding esquerdo */
+  padding-left: 0px;  /* Aumentado o padding esquerdo */
   flex: 1;
   display: flex;
   flex-direction: column;
