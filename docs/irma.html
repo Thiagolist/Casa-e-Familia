@@ -12,7 +12,26 @@
     </header>
 
     <main class="container centered">
-      <p>Mensagem para a irmã.</p>
+      <p>oi minha irmã,</p>
+      <p>Como estão as crianças? Eu tenho uma vontade imensa de estar perto dessas obras primas da vontade de Deus. Tenho certeza que Jesus tem cuidado e fortalecido você para ensinar a seus filhos com muito amor.</p>
+      <p>O ensino da ética pode explicar a necessidade da ciências, porém a ciência não é suficiente para explicar a necessidade da ética. Fundamentalmente o bom estatístico para ser bom precisa ser ético, caso contrário seu viés pode diretamente influenciar seus resultados.</p>
+      <p>Há algo maior que o conhecimento a ser ensinado às Crianças e isso é a história e os ensinamentos de Cristo.</p>
+      <p>Deus os preserve em sua Graça</p>
+      <p><small>Escrito em <time id="writtenAtIrma"></time></small></p>
+      <script>
+        (function() {
+          var el = document.getElementById('writtenAtIrma');
+          var now = new Date();
+          if (el) {
+            el.dateTime = now.toISOString();
+            try {
+              el.textContent = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long', timeStyle: 'short' }).format(now);
+            } catch (e) {
+              el.textContent = now.toLocaleString('pt-BR');
+            }
+          }
+        })();
+      </script>
       <p><a class="item" href="index.html">← Voltar</a></p>
     </main>
   </body>
