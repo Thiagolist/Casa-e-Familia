@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Casa e Família</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="site-title">Casa e Família</h1>
+        <p class="site-subtitle">Um espaço simples e acolhedor</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <nav class="tabs" aria-label="Seções principais">
+        <button class="tab is-active" data-target="#pai" aria-controls="pai" aria-selected="true">Pai</button>
+        <button class="tab" data-target="#mae" aria-controls="mae" aria-selected="false">Mãe</button>
+      </nav>
+
+      <section id="pai" class="tab-panel is-active" role="region" aria-labelledby="tab-pai">
+        <h2>Pai</h2>
+        <p>
+          Bem-vindo à seção do Pai. Aqui você pode adicionar histórias, fotos ou mensagens especiais.
+        </p>
+      </section>
+
+      <section id="mae" class="tab-panel" role="region" aria-labelledby="tab-mae">
+        <h2>Mãe</h2>
+        <p>
+          Bem-vinda à seção da Mãe. Este espaço é dedicado a memórias, recados e carinho.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          Feito com ❤️ e hospedado no GitHub Pages.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
