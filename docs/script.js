@@ -7,7 +7,7 @@
       card.style.display = show ? '' : 'none';
     });
 
-    document.querySelectorAll('.chip, .nav-item').forEach(function(el){
+    document.querySelectorAll('.nav-item').forEach(function(el){
       el.classList.toggle('is-active', el.getAttribute('data-filter') === filter);
       el.setAttribute('aria-pressed', el.classList.contains('is-active'));
     });
@@ -16,7 +16,7 @@
   }
 
   function bindControls(){
-    document.querySelectorAll('.chip, .nav-item').forEach(function(el){
+    document.querySelectorAll('.nav-item').forEach(function(el){
       el.addEventListener('click', function(){
         var f = el.getAttribute('data-filter') || 'all';
         setFilter(f);

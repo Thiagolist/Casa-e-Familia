@@ -7,18 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=3" />
-    <script defer src="script.js?v=2"></script>
+    <link rel="stylesheet" href="styles.css?v=4" />
+    <script defer src="script.js?v=3"></script>
   </head>
   <body>
     <header class="topbar">
       <div class="topbar-inner">
         <h1 class="brand">Casa e Família</h1>
-        <nav class="chipbar" aria-label="Categorias">
-          <button class="chip is-active" data-filter="all">Todos</button>
-          <button class="chip" data-filter="pai">Pai</button>
-          <button class="chip" data-filter="mae">Mãe</button>
-        </nav>
       </div>
     </header>
 
@@ -28,6 +23,8 @@
           <button class="nav-item is-active" data-filter="all">Todos</button>
           <button class="nav-item" data-filter="pai">Pai</button>
           <button class="nav-item" data-filter="mae">Mãe</button>
+          <button class="nav-item" data-filter="esposa">Esposa</button>
+          <button class="nav-item" data-filter="irma">Irmã</button>
         </nav>
       </aside>
 
@@ -70,6 +67,26 @@
               <span class="eyebrow">Mãe</span>
               <h3 class="title">Receitas da Família</h3>
               <p class="excerpt">Sabores que contam histórias e unem todos à mesa.</p>
+            </div>
+          </article>
+
+          <article class="card" data-category="esposa">
+            <a class="stretched-link" href="esposa-cartas.html" aria-label="Abrir: Cartas da Esposa"></a>
+            <div class="media bg-2" role="img" aria-label="Imagem ilustrativa"></div>
+            <div class="card-body">
+              <span class="eyebrow">Esposa</span>
+              <h3 class="title">Cartas da Esposa</h3>
+              <p class="excerpt">Palavras de carinho e parceria para a família.</p>
+            </div>
+          </article>
+
+          <article class="card" data-category="irma">
+            <a class="stretched-link" href="irma-recordacoes.html" aria-label="Abrir: Recordações da Irmã"></a>
+            <div class="media bg-3" role="img" aria-label="Imagem ilustrativa"></div>
+            <div class="card-body">
+              <span class="eyebrow">Irmã</span>
+              <h3 class="title">Recordações da Irmã</h3>
+              <p class="excerpt">Momentos de cumplicidade e afeto entre irmãos.</p>
             </div>
           </article>
         </section>
