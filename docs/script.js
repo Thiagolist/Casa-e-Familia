@@ -1,45 +1,32 @@
-function setActiveTab(targetSelector) {
-  var panels = document.querySelectorAll('.tab-panel');
-  var tabs = document.querySelectorAll('.tab');
-
-  panels.forEach(function(panel) {
-    panel.classList.remove('is-active');
-  });
-
-  tabs.forEach(function(tab) {
-    tab.classList.remove('is-active');
-    tab.setAttribute('aria-selected', 'false');
-  });
-
-  var target = document.querySelector(targetSelector);
-  if (target) {
-    target.classList.add('is-active');
-  }
-
-  var activeTab = Array.prototype.find.call(tabs, function(tab) {
-    return tab.getAttribute('data-target') === targetSelector;
-  });
-
-  if (activeTab) {
-    activeTab.classList.add('is-active');
-    activeTab.setAttribute('aria-selected', 'true');
-  }
-
-  if (target && target.id) {
-    history.replaceState(null, '', '#' + target.id);
-  }
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  var tabs = document.querySelectorAll('.tab');
-
-  tabs.forEach(function(tab) {
-    tab.addEventListener('click', function() {
-      var target = tab.getAttribute('data-target');
-      if (target) setActiveTab(target);
+(function(){
+  function setFilter(filter){
+    var cards = document.querySelectorAll('.card');
+    cards.forEach(function(card){
+      var cat = card.getAttribute('data-category');
+      var show = (filter === 'all') || (cat === filter);
+      card.style.display = show ? '' : 'none';
     });
-  });
 
-  var hash = window.location.hash || '#pai';
-  setActiveTab(hash);
-});
+    document.querySelectorAll('.chip, .nav-item').forEach(function(el){
+      el.classList.toggle('is-active', el.getAttribute('data-filter') === filter);
+      el.setAttribute('aria-pressed', el.classList.contains('is-active'));
+    });
+
+    history.replaceState(null, '', '#' + filter);
+  }
+
+  function bindControls(){
+    document.querySelectorAll('.chip, .nav-item').forEach(function(el){
+      el.addEventListener('click', function(){
+        var f = el.getAttribute('data-filter') || 'all';
+        setFilter(f);
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    bindControls();
+    var initial = (window.location.hash || '#all').replace('#','');
+    setFilter(initial);
+  });
+})();
