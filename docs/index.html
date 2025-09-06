@@ -7,8 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=4" />
-    <script defer src="script.js?v=3"></script>
+    <link rel="stylesheet" href="styles.css?v=5" />
   </head>
   <body>
     <header class="topbar">
@@ -18,76 +17,82 @@
     </header>
 
     <div class="page container">
-      <aside class="sidebar" aria-label="Navegação lateral">
+      <aside class="sidebar">
         <nav class="sidenav">
-          <button class="nav-item is-active" data-filter="all">Todos</button>
-          <button class="nav-item" data-filter="pai">Pai</button>
-          <button class="nav-item" data-filter="mae">Mãe</button>
-          <button class="nav-item" data-filter="esposa">Esposa</button>
-          <button class="nav-item" data-filter="irma">Irmã</button>
+          <a href="#todos" class="nav-item active">Todos</a>
+          <a href="#pai" class="nav-item">Pai</a>
+          <a href="#mae" class="nav-item">Mãe</a>
+          <a href="#esposa" class="nav-item">Esposa</a>
+          <a href="#irma" class="nav-item">Irmã</a>
         </nav>
       </aside>
 
       <main class="content">
-        <section class="grid" aria-live="polite">
-          <article class="card" data-category="pai">
-            <a class="stretched-link" href="pai-historias.html" aria-label="Abrir: Histórias do Pai"></a>
-            <div class="media bg-1" role="img" aria-label="Imagem ilustrativa"></div>
-            <div class="card-body">
-              <span class="eyebrow">Pai</span>
-              <h3 class="title">Histórias do Pai</h3>
-              <p class="excerpt">Momentos marcantes e lembranças que aquecem o coração.</p>
-            </div>
+        <section class="grid">
+          <article class="card pai">
+            <a href="pai-historias.html" class="card-link">
+              <div class="media bg-1"></div>
+              <div class="card-body">
+                <span class="eyebrow">Pai</span>
+                <h3 class="title">Histórias do Pai</h3>
+                <p class="excerpt">Momentos marcantes e lembranças que aquecem o coração.</p>
+              </div>
+            </a>
           </article>
 
-          <article class="card" data-category="mae">
-            <a class="stretched-link" href="mae-carinho.html" aria-label="Abrir: Carinho de Mãe"></a>
-            <div class="media bg-2" role="img" aria-label="Imagem ilustrativa"></div>
-            <div class="card-body">
-              <span class="eyebrow">Mãe</span>
-              <h3 class="title">Carinho de Mãe</h3>
-              <p class="excerpt">Dedicado às memórias, ensinamentos e cuidados de mãe.</p>
-            </div>
+          <article class="card mae">
+            <a href="mae-carinho.html" class="card-link">
+              <div class="media bg-2"></div>
+              <div class="card-body">
+                <span class="eyebrow">Mãe</span>
+                <h3 class="title">Carinho de Mãe</h3>
+                <p class="excerpt">Dedicado às memórias, ensinamentos e cuidados de mãe.</p>
+              </div>
+            </a>
           </article>
 
-          <article class="card" data-category="pai">
-            <a class="stretched-link" href="pai-conselhos.html" aria-label="Abrir: Conselhos do Pai"></a>
-            <div class="media bg-3" role="img" aria-label="Imagem ilustrativa"></div>
-            <div class="card-body">
-              <span class="eyebrow">Pai</span>
-              <h3 class="title">Conselhos do Pai</h3>
-              <p class="excerpt">Lições de vida e valores para toda a família.</p>
-            </div>
+          <article class="card pai">
+            <a href="pai-conselhos.html" class="card-link">
+              <div class="media bg-3"></div>
+              <div class="card-body">
+                <span class="eyebrow">Pai</span>
+                <h3 class="title">Conselhos do Pai</h3>
+                <p class="excerpt">Lições de vida e valores para toda a família.</p>
+              </div>
+            </a>
           </article>
 
-          <article class="card" data-category="mae">
-            <a class="stretched-link" href="mae-receitas.html" aria-label="Abrir: Receitas da Família"></a>
-            <div class="media bg-4" role="img" aria-label="Imagem ilustrativa"></div>
-            <div class="card-body">
-              <span class="eyebrow">Mãe</span>
-              <h3 class="title">Receitas da Família</h3>
-              <p class="excerpt">Sabores que contam histórias e unem todos à mesa.</p>
-            </div>
+          <article class="card mae">
+            <a href="mae-receitas.html" class="card-link">
+              <div class="media bg-4"></div>
+              <div class="card-body">
+                <span class="eyebrow">Mãe</span>
+                <h3 class="title">Receitas da Família</h3>
+                <p class="excerpt">Sabores que contam histórias e unem todos à mesa.</p>
+              </div>
+            </a>
           </article>
 
-          <article class="card" data-category="esposa">
-            <a class="stretched-link" href="esposa-cartas.html" aria-label="Abrir: Cartas da Esposa"></a>
-            <div class="media bg-2" role="img" aria-label="Imagem ilustrativa"></div>
-            <div class="card-body">
-              <span class="eyebrow">Esposa</span>
-              <h3 class="title">Cartas da Esposa</h3>
-              <p class="excerpt">Palavras de carinho e parceria para a família.</p>
-            </div>
+          <article class="card esposa">
+            <a href="esposa-cartas.html" class="card-link">
+              <div class="media bg-2"></div>
+              <div class="card-body">
+                <span class="eyebrow">Esposa</span>
+                <h3 class="title">Cartas da Esposa</h3>
+                <p class="excerpt">Palavras de carinho e parceria para a família.</p>
+              </div>
+            </a>
           </article>
 
-          <article class="card" data-category="irma">
-            <a class="stretched-link" href="irma-recordacoes.html" aria-label="Abrir: Recordações da Irmã"></a>
-            <div class="media bg-3" role="img" aria-label="Imagem ilustrativa"></div>
-            <div class="card-body">
-              <span class="eyebrow">Irmã</span>
-              <h3 class="title">Recordações da Irmã</h3>
-              <p class="excerpt">Momentos de cumplicidade e afeto entre irmãos.</p>
-            </div>
+          <article class="card irma">
+            <a href="irma-recordacoes.html" class="card-link">
+              <div class="media bg-3"></div>
+              <div class="card-body">
+                <span class="eyebrow">Irmã</span>
+                <h3 class="title">Recordações da Irmã</h3>
+                <p class="excerpt">Momentos de cumplicidade e afeto entre irmãos.</p>
+              </div>
+            </a>
           </article>
         </section>
       </main>
