@@ -16,7 +16,10 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
 
 .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
 
-.topbar { position: sticky; top: 0; z-index: 10; background: linear-gradient(180deg, rgba(11,15,20,0.9), rgba(11,15,20,0.75)); backdrop-filter: saturate(140%) blur(8px); border-bottom: 1px solid var(--border); }
+.topbar { position: sticky; top: 0; z-index: 10; background: linear-gradient(180deg, rgba(11,15,20,0.9), rgba(11,15,20,0.75)); backdrop-filter: saturate(140%) blur(8px); }
+
+/* Make header content align close to the left edge */
+.topbar .container { max-width: none; margin: 0; padding-left: 16px; padding-right: 16px; }
 
 .brand { margin: 18px 0 8px; font-weight: 700; letter-spacing: -0.02em; font-size: 34px; }
 
